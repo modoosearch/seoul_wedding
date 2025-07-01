@@ -1,8 +1,10 @@
 name: Call WP-Cron
 
 on:
+  workflow_dispatch:      # 수동 실행 버튼도 추가
   schedule:
     - cron: '0 2,8 * * *'  # 한국시간 11시, 17시(UTC 2시, 8시)
+
 jobs:
   call-wp-cron:
     runs-on: ubuntu-latest
