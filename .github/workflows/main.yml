@@ -2,9 +2,7 @@ name: Call WP-Cron
 
 on:
   schedule:
-    # 한국시간 오전 11시, 오후 5시 (UTC 기준: 02시, 08시)
-    - cron: '0 2,8 * * *'
-
+    - cron: '0 2,8 * * *'  # 한국시간 11시, 17시(UTC 2시, 8시)
 jobs:
   call-wp-cron:
     runs-on: ubuntu-latest
