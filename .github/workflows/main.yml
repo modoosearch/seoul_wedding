@@ -1,0 +1,14 @@
+name: Call WP-Cron
+
+on:
+  schedule:
+    # 한국시간 오전 11시, 오후 5시 (UTC 기준: 02시, 08시)
+    - cron: '0 2,8 * * *'
+
+jobs:
+  call-wp-cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call wp-cron.php
+        run: |
+          curl -s "https://weddingfair.seoul.kr/wp-cron.php?doing_wp_cron"
